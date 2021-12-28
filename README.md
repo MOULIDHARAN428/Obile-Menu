@@ -9,7 +9,8 @@ This site has six pages. The first one is home, which has CEO words, customer re
 I have built it by using **HTML, CSS, Bootstrap** for front-end and **PHP and MySQL** for back-end
 
 ## What's next
-I taugth of selling this website and one who likes to buy this website contact me<br />
+I like intergate it has a fully fledged website so I taugth of selling this website and one who likes to buy this website contact me<br />
+Can add the hotel menu, chef voice, CEO voice and also can be hosted<br />
 Mail id -> moulidharan428@gmail.com
 
 ## How to run
