@@ -3,10 +3,7 @@ I built this website as a practise for web development. I started this website i
 I didn't use the frameworks like React and Express, and I built it with simple HTML.
 
 ## WHAT IT HAS
-This site has 6 pages. First one is home which has CEO words, customer reviews and current or upcoming offers. In About section, I have included the Chief words and showcase the
-past performance of the hotel with some graphical datas. In contact page, I have provided the form to contact hotel. And remaining 3 pages will have Breakfast, Lunch, Dinner menu.
-Each menu will have three sectors like today's special, obile's best dish, today's menu. Along with that we have table reservation button in each page which we be used to book
-tables from the web site.
+This site has six pages. The first one is home, which has CEO words, customer reviews, and current or upcoming offers. In the About section, I have included the chief words and showcased the past performance of the hotel with some graphical data On the contact page, I have provided the form to contact the hotel. And the remaining 3 pages will have breakfast, lunch, and dinner menus. Each menu will have three sectors, like today's special, Obile's best dish, and today's menu. Along with that, we have a table reservation button on each page which can be used to book tables from the web site.
 
 ## How I built it
 I have built it by using **HTML, CSS, Bootstrap** for front-end and **PHP and MySQL** for back-end
