@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OBILE  RESTAURANTS -ABOUT US</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<!---------Style Sheet---------->
+	<link rel="stylesheet" href="../css/about.css">
+	<link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-socail.css">
+	<link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	
+</head>
+<body>
+	<!----------HEADER------------>
+	<section class="header">
+			<nav class="navbar navbar-expand-lg navbar-light">
+  				<div class="container-fluid">
+    				<a class="navbar-brand mr-auto" href="home.html">
+    					<img src="../image/logo.png"><span>OBILE RESTAURANTS</span>
+    				</a>
+    				<div class="splitter">    </div>
+    				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+      					<i class="fa fa-bars"></i>
+    				</button>
+    				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        					<li class="nav-item">
+          						<a class="nav-link " href="home.html"><span class="fa fa-home fa-lg"></span>  HOME </a>
+        					</li>
+					        <li class="nav-item">
+					          <a class="nav-link active" href="#"><span class="fa fa-info fa-lg"></span>  ABOUT </a>
+					        </li>
+        					<li class="nav-item dropdown">
+	          					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fa fa-list fa-lg"></span>  MENU </a>
+	          					<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+	            					<li><a class="dropdown-item" href="menu-breakfast.html">Breakfast</a></li>
+	            					<li><a class="dropdown-item" href="menu-lunch.html">Lunch</a></li>
+	            					<!--<li> <hr class="dropdown-divider"> </li>-->
+	            					<li><a class="dropdown-item" href="menu-dinner.html">Dinner</a></li>
+					          	</ul>
+				        	</li>
+					        <li class="nav-item">
+					          <a class="nav-link" href="contact.html"><span class="fa fa-address-card fa-lg"></span>  CONTACT US </a>
+					        </li>
+					    </ul>
+                		
+      					<form class="d-flex">
+      						<span class="navbar-text">
+          						<a role="button" class="login-btn bg-success" id="loginButton" role="button" data-placement="bottom" class="btn"><span class="fa fa-sign-in"></span> Login</a>
+        					</span>
+					    </form>
+					    
+    				</div>
+  				</div>
+			</nav>
+	</section>
+	<!----------LOGIN MODAL-------------->
+	
+	<div id="loginModal" class="modal fade" role="dialog">
+    	<div class="modal-dialog modal-md" role="document">
+      		<div class="modal-content">
+        		<div class="modal-header navbar-dark" style="color:black;">
+          			<h4 class="modal-title">Login </h4>
+          			<button id="closelogmodal" type="button" class="close" data-dismiss="modal" role="document">&times;</button>
+          		</div>
+		        <div class="modal-body" style="background-color:#8181F7;">
+		          <form>
+		            <div class="form">
+
+		              <div class="form-group col-sm-4">
+		                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+		                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+		              </div>
+		              <div class="form-group col-sm-4">
+		                <label class="sr-only" for="exampleInputPassword3">Password</label>
+		                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+		              </div>
+		              <div class="col-sm-auto ">
+		                <div class="form-check">
+		                  <input class="form-check-input" type="checkbox">
+		                  <label class="form-check-label"> Remember me
+		                  </label>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="form-row col-sm-4 loginModal-btn">
+		              <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+		              <br><button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+            		</div><br>           	
+					<p>Don't have an account? <a href="signup.html" style="color:black">Sign Up</a></p>
+          			</form>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+
+  	<!----------RESERVE TABLE MODAL-------------->
+
+  	<div id="reservationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header navbar-dark" style="color:black;">
+          <h5 class="modal-title">Reserve a Table</h5>
+          <button id="closemodal" type="button" class="close" data-dismiss="modal" role="document">&times;</button>
+        </div>
+        <div class="modal-body" style="background-color:#8181F7;">
+          <form action="../php/reserve.php" method="POST" id="resform">
+            <div class="form-group row">
+              <label class="col-12 col-sm-2" >Number of Guests</label>
+              <div class="col">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="numGuests" id="one_guest_radio" value="one" checked>
+                  <label class="form-check-label" for="one_guest_radio">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="numGuests" id="two_guest_radio" value="two">
+                  <label class="form-check-label" for="two_guest_radio">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="numGuests" id="three_guest_radio" value="three">
+                  <label class="form-check-label" for="three_guest_radio">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="numGuests" id="four_guest_radio" value="four">
+                  <label class="form-check-label" for="four_guest_radio">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="numGuests" id="six_guest_radio" value="six">
+                  <label class="form-check-label" for="six_guest_radio">6</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-12 col-sm-2">Section</label>
+              <div class="col-12 col-sm-4">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                    <input type="radio" name="section" value="non_smoking" id="non_smoking" checked>Non-Smoking
+                  </label>
+                  <label class="btn btn-danger">
+                    <input type="radio" name="section" value="smoking" id="smoking">Smoking
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-12 col-sm-2">Date and Time</label>
+              <div class="col-12 col-sm-4">
+                <input type="date" class="form-control" name="date" id="date">
+              </div>
+              <div class="col-12 col-sm-4">
+                <input type="time" class="form-control" name="time" id="time">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col offset-0 offset-sm-2">
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="submit">Reserve</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-----------BODY QUOTE + RESERVE AND CANCLE BUTTON-------------->
+	
+	<section class="body">
+		
+		<div class="row banner">
+			<div class="col-md-6 text-center">
+				<h3>A good restaurant is like a vacation, it transports you, and it becomes a lot more than just about the food</h3>
+				<p>-Philip Rosenthal</p>
+			</div>
+			<div class="col-md-6 text-center">
+				<a role="button" class="express-btn  " id="reserveButton" data-toggle="tooltip" data-html="true" title="Or Call us at +91 1234567890" data-placement="bottom">RESERVE TABLE</a>
+				
+				<a href="contact.html">CONTACT US</a>
+			</div>
+		</div>
+
+	</section>
+
+	<!------BREAD CRUMB---------->
+
+    <ol class="col-12 breadcrumb bread">
+      <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+      <il class="breadcrumb-item active"><a>About</a></il>
+    </ol>
+  	
+  	<!-----BODY------>
+
+  	<!--ACCORDIN-COOPERATIVE LEADERS-->
+
+	<!-- Corporate Leadership -->
+	<div class="row row-content">
+		<div class="col-12 col-sm-1"></div>
+			<div class="col-12 col-sm-11">
+					<h3>Corporate Leadership</h3>
+					<br>
+				<div class="col-sm-10" id="accordion" role="tablist">
+						<div class="card">
+							<div class="card-header" role="tab" id="peterhead">
+								<h5 class="mb-0">
+									<a data-toggle="collapse" data-parent="#accordion" href="#peter">
+										Peter Pan <small>Chief Epicurious Officer</small>
+									</a>
+								</h5>
+							</div>
+							<div role="tabpanel" class="collapse show" id="peter">
+								<div class="card-block">
+									<p class="hidden-xs-down">
+										Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="dhanasekaranhead">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#dhanasekaran">
+										Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+									</a>
+								</h5>
+							</div>
+							<div role="tabpanel" class="collapse" id="dhanasekaran">
+								<div class="card-block">
+									<p class="hidden-xs-down">
+										Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="agumbehead">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#agumbe">
+										Agumbe Tang <small>Chief Taste Officer</small>
+									</a>
+								</h5>
+							</div>
+							<div role="tabpanel" class="collapse" id="agumbe">
+								<div class="card-block">
+									<p class="hidden-xs-down">
+										Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab" id="albertohead">
+								<h5 class="mb-0">
+									<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#alberto">
+										Alberto Somayya <small>Executive Chef</small>
+									</a>
+								</h5>
+							</div>
+							<div role="tabpanel" class="collapse" id="alberto">
+								<div class="card-block">
+									<p class="hidden-xs-down">
+										Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>
+									</p>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+	</div>
+
+
+	<!--TABLE : FACTS AND FIGURES-->
+
+	<div class="row row-content text-white" style="background: #6900d1;">
+			<div class="col-12 col-sm-1"></div>
+			<div class="col-12 col-sm-6">
+				<h2 >Facts &amp; Figures</h2>
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead class="thead-inverse text-white">
+							<tr class="">
+								<th>&nbsp;</th>
+								<th>2021</th>
+								<th>2022</th>
+								<th>2023</th>
+							</tr>
+						</thead>
+						<tbody class="text-white">
+							<tr style="color: pink">
+								<th>Employees</th>
+								<td>15</td>
+								<td>30</td>
+								<td>40</td>
+							</tr>
+							<tr>
+								<th>Guests Served</th>
+								<td>15000</td>
+								<td>45000</td>
+								<td>100,000</td>
+							</tr>
+							<tr style="color: pink">
+								<th>Special Events</th>
+								<td>3</td>
+								<td>20</td>
+								<td>45</td>
+							</tr>
+							<tr>
+								<th>Annual Turnover</th>
+								<td>$251,325</td>
+								<td>$1,250,375</td>
+								<td>~$3,000,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-12 col-sm-1"></div>
+			<div class="col-12 col-sm-3 d-none d-lg-block">
+				<img src="../image/graph.png">
+			</div>
+	</div>
+
+  	<!--HISTORY OF THE HOTEL-->
+
+  	<div class="row row-content">
+  			<div class="col-12 col-sm-1"></div>
+			<div class="col-12 col-sm-5">
+				<h2>Our History</h2>
+				<p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+				<p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+			</div>
+			<!-- Facts at a Glance -->
+			<div class="col-12 col-sm-1"></div>
+			<div class="col-12 col-sm-4 d-none d-lg-block">
+				<div class="card">
+					<h3 class="card-header bg-primary text-white">Facts at a Glance</h3>
+					<div class="card-block">
+						<br>
+						<dl class="row">
+							<div class="col-1"></div><dt class="col-5">Started</dt>
+							<dd class="col-6">3 Feb. 2021</dd>
+							<div class="col-1"></div><dt class="col-5">Major Stake Holder</dt>
+							<dd class="col-6">HK Fine Foods Inc.</dd>
+							<div class="col-1"></div><dt class="col-5">Last Year's Turnover</dt>
+							<dd class="col-6">$1,250,375</dd>
+							<div class="col-1"></div><dt class="col-5">Employees</dt>
+							<dd class="col-6">40</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
+  	<!---------FOOTER-------->
+	<footer class="footer">
+    <div class="container">
+    	<div class="text-center">
+    		<h3>Subscribe To Our Newsletter</h3>
+	    	<form>
+	    		<input type="email" placeholder="Enter Your Email..." required>
+	    		<br /><button style="color: #fff; width: 150px; border:1px solid #fff; background: transparent; font-size: 20px;" type="submit">SUBSCRIBE</button>
+	    	</form>
+	    </div>
+      <div class="row">
+        <div class="col-4 offset-1 col-sm-2"><br>
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html" style="color:white">Home</a></li>
+            <li><a href="#" style="color:black">About</a></li>
+            <li><a href="menu-breakfast.html" style="color:white">Menu</a></li>
+            <li><a href="contact.html" style="color:white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-7 col-sm-5"><br>
+          <h5>Our Address</h5>
+          <address>
+            121, Clear Water Bay Road<br>
+            Clear Water Bay, Shimla<br>
+            INDIA<br>
+            <i class="fa fa-phone fa-md"></i> +91 9098453492<br>
+            <i class="fa fa-fax fa-md"></i> +91 9098453492<br>
+            <i class="fa fa-envelope fa-md">  </i> <a href="mailto:confusion@food.net" style="color:white">obilerestaurants@food.net</a>
+          </address>
+        </div>
+        <div class="col-12 col-sm-4 align-self-center">
+          <div class="text-center">
+            <a class="btn btn-danger btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+            <a class="btn btn-primary btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-secondary btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+            <a class="btn btn-primary btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-danger btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+            <a class="btn btn-danger btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <br><p>© Copyright 2021 OBILE RESTAURANTS</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+	
+
+
+
+	<!----------S C R I P T-------------->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+      $('#loginButton').click(function() {
+        $('#loginModal').modal('show');
+      });
+      $('#closelogmodal').click(function() {
+        $('#loginModal').modal('hide');
+      });
+      $('#reserveButton').click(function() {
+        $('#reservationModal').modal('show');
+      });
+      $('#closemodal').click(function() {
+        $('#reservationModal').modal('hide');
+      });
+
+    });
+  </script>
+
+</body>
+</html>
