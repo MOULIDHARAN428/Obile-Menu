@@ -1,4 +1,4 @@
-  WHY OBILE MENU
+## WHY OBILE MENU
 I built this website as a practise for web development. I started this website in 2020 and am still working on it in my free time. As a beginner, 
 I didn't use the frameworks like React and Express, and I built it with simple HTML.
 
