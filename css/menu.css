@@ -1,0 +1,187 @@
+*{
+	margin: 0;
+	padding:0;
+}
+/*********** N A V B A R ********/
+
+.header,.body{
+	background: #6900d1;
+}
+.navbar{
+	padding-top: 20px;
+}
+.nav-item{
+	margin-right: 40px;
+	margin-bottom: 10px;
+}
+.nav-link{
+	color: #fff !important;
+	font-family: sans-serif;
+	font-size: 13px !important;
+	padding: 0 0 5px 0 !important;
+	display: unset !important;
+}
+.navbar-brand{
+	color: #fff !important;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 20px !important;
+	display: block;
+}
+.navbar-brand img{
+	width: 65px;
+	padding-right: 10px;
+	margin-left: 0px !important;
+}
+.splitter{
+	margin-right: 100px;
+}
+.fa-bars{
+	color: #fff;
+	font-size: 30px !important;
+}
+.navbar-toggler{
+	border: 0 !important;
+	outline: none !important;
+}
+.active{
+	border-bottom: 2px solid;
+}
+.nav-link:hover{
+	border-bottom: 2px solid;
+}
+
+/*********MODAL**************/
+.modal-header{
+	background-color:#8181F7;
+}
+
+.login-btn{
+	color: #000 !important;
+	margin-right: 5px;
+	margin-left: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	width: 100px;
+}
+.form-check-input{
+	margin-bottom: 70px
+}
+#exampleInputEmail3{
+	width:300px;
+}
+#exampleInputPassword3{
+	width:300px;
+}
+.loginModal-btn{
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+.or{
+	width:30px;
+	margin: -30px auto 10px;
+}
+
+/***********************/
+.banner{
+	margin-top: 8%;
+	color: #fff; 
+}
+.banner h3{
+	margin : 20px 0 20px;
+	font-weight: 600;
+	font-size: 17px;
+	text-align: right;
+	width: 99%;
+}
+.banner p{
+	text-align: right;
+	width: 99%;
+}
+.reserve-btn{
+	margin-top: 70px;
+	border-radius: 5px;
+
+}
+.banner a{
+	padding: 12px;
+	margin-bottom: 15px;
+	width: 150px;
+	display: inline-block;
+	text-decoration: none;
+	background: #6900d1;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	text-align: center !important;
+	margin-top: 30px;
+	font-size: 14px;
+}
+.banner a:hover{
+	color: #fff;
+}
+.express-btn{
+	background: #fff !important;
+	color: #000 !important;
+	margin-right: 5px !important;
+}
+
+/******************************************/
+.row-content h3{
+	font-family: sans-serif;
+}
+@media (max-width: 991px){
+	.signature_dices p,.signature_dices h4{
+		text-align: left !important;
+	}
+}
+
+
+/*******FOOTER********/
+.footer{
+	width: 100%;
+	background: #6900d1;
+	padding top:5px;
+	color: white;
+}
+.footer h3{
+	color:white;
+	font-family: sans-serif;
+	font-weight: 200;
+	padding-top: 27px;
+	padding-bottom: 10px;
+}
+.footer input{
+	width: 50%;
+	background: transparent;
+	outline: none;
+	border:0;
+	border-bottom: 1px solid #fff;
+	padding:10px;
+	color: #fff;
+	margin-bottom: 30px;
+	text-align: center;
+}
+::placeholder{
+	color: #efefef;
+	font-size: 13px;
+};
+.footer button{
+	padding: 6px;
+	width: 180px;
+	margin: auto;
+	display: block;
+	color: #fff;
+	border:1px solid #fff;
+	background: transparent;
+	font-size: 20px;
+}
+.footer button:hover{
+	background: skyblue !important;
+	color: #fff !important;
+	border-radius: 5px;
+}
+
